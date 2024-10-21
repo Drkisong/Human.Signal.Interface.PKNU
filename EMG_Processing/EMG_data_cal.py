@@ -5,7 +5,7 @@ from scipy.signal import hilbert, chirp
 from scipy import signal
 import scipy.fft
 
-## Date load
+## Data load
 n_file = 'emg_data.csv'
 emg = np.loadtxt(n_file , delimiter = ',')
 data = emg[:,1]
@@ -16,6 +16,7 @@ s_rate = 0.00008  #unit [sec]
 n_samples = len(data) 
 d_time = np.arange(n_samples)*s_rate
 
+## Data plot
 plt.plot(d_time, data)
 plt.title('Raw data (EMG)')
 plt.xlabel('Time (s)')
